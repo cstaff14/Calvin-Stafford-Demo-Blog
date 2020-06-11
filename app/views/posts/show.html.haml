@@ -15,3 +15,12 @@
     .content= @post.content
 
 .section.comments
+  .container
+    %h2.subtitle.is-5
+      %strong= @post.comments.count
+      %strong Comments
+    = render @post.comments
+    .comment-form
+      %hr
+      %h3.subtitle.is-3 Leave a reply
+      = render 'comments/form'

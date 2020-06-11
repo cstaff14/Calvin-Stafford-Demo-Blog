@@ -45,6 +45,9 @@ gem 'simple_form', '~> 5.0', '>= 5.0.2'
 # Using haml instead of erb
 gem "haml-rails", "~> 2.0"
 
+# Flexible authentication solution for Rails with Warden. Used to create user accounts
+gem 'devise', '~> 4.7', '>= 4.7.2'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
