@@ -1,3 +1,13 @@
 - content_for :page_title, "Create a new post"
 
-= render 'form'
+- if current_user && current_user.admin
+  = render 'form'
+- else
+  .container.has-text-centered
+    %h1.title Only an admin can create a post.
+    .container
+      = link_to 'Home', root_path, class: 'button'
+      -if !current_user
+        = link_to 'Sign in', new_user_session_path, class: 'button is-primary'
+
+  
